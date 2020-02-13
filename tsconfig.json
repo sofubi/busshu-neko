@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "CommonJS",
+        "rootDir": "src",
+        "outDir": "lib",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "lib": ["ES6", "ES2015", "DOM"],
+        "types": ["node", "yargs"],
+        "importHelpers": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "experimentalDecorators": true
+    },
+    "exclude": ["node_modules", "lib"]
+}

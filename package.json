@@ -1,0 +1,49 @@
+{
+  "name": "@sofubi/busshu",
+  "version": "0.0.0",
+  "description": "A CLI for reading chapters from Mangadex",
+  "main": "lib/index.js",
+  "bin": {
+    "@sofubi/busshu": "bin/busshu",
+    "busshu": "bin/busshu"
+  },
+  "scripts": {
+    "build": "npm run clean:some && tsc -p .",
+    "start": "npm run build && busshu",
+    "clean:some": "rm -rf ./lib ./docs",
+    "clean:all": "rm -rf ./node_modules ./package-lock.json ./lib ./docs",
+    "refresh": "npm run clean:all && npm install",
+    "publish": "npm run build && npm publish",
+    "docs": "typedocs --out docs ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/thomaslawton91/busshu-neko.git"
+  },
+  "keywords": [
+    "cli",
+    "manga",
+    "mangadex",
+    "read"
+  ],
+  "author": "Thomas Lawton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomaslawton91/busshu-neko/issues"
+  },
+  "homepage": "https://github.com/thomaslawton91/busshu-neko#readme",
+  "devDependencies": {
+    "@types/node": "^13.7.1",
+    "@types/yargs": "^15.0.3",
+    "@types/yargs-parser": "^15.0.0",
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.6.2",
+    "typedoc": "^0.16.9",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "yargs": "^15.1.0"
+  }
+}
